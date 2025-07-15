@@ -1,0 +1,7 @@
+<h1>Daily Affirmation List</h1>
+
+<ul>
+<% @affirmations.each do |affirmation| %>
+  <li><%= affirmation.url %> | <%= affirmation.translation %></li>
+<% end %>
+</ul>
