@@ -2,6 +2,8 @@
 
 <ul>
 <% @affirmations.each do |affirmation| %>
-  <li><%= affirmation.url %> | <%= affirmation.translation %></li>
+  <li><%= affirmation.url %> | <%= affirmation.translation %> | <%= link_to 'Edit', edit_affirmation_path(affirmation) %> | <%= link_to 'Delete', affirmation_path(affirmation), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></li>
 <% end %>
 </ul>
+
+<%= link_to 'New Affirmation', new_affirmation_path %>
