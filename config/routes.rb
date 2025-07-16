@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   resources :affirmations
 
   # Defines the root path route ("/")
-  root "affirmations#index"
+  root "daily#index"
 end
